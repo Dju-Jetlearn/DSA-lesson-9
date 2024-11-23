@@ -22,12 +22,21 @@ def Postorder(root):
         Postorder(root.right)
         print(root.data)
 
-root = (100)
-root.left = (20)
-root.right = (30)
-root.left.left = (40)
-root.left.right = (70)
-root.right.left = (90)
-root.right.right = (200)
+root = Node(100)
+root.left = Node(20)
+root.right = Node(30)
+root.left.left = Node(40)
+root.left.right = Node(70)
+root.right.left = Node(90)
+root.right.right = Node(200)
 
-print("These are the numbers that are ")
+user = input("Do you want to use Inorder, Preorder, or Postorder? ")
+
+if user == "Inorder":
+    Inorder(root)
+elif user == "Preorder":
+    Preorder(root)
+elif user == "Postorder":
+    Postorder(root)
+else:
+    print("That is not a valid choice, either choose the options available, or remember there are no spaces and the first letter is capital.")
